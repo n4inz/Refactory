@@ -1,0 +1,24 @@
+<html>  
+    <head> 
+        <title>Palindrome </title>  
+    </head>  
+        <body> 
+            <script>        
+                    
+            function palindrome(str) {  
+                const string = str.replace(/\s/g, '').toLowerCase();
+                const len = string.length;  
+                for (let i = 0; i < len / 2; i++) {  
+                    if (string[i] !== string[len - 1 - i]) {  
+                        return 'Bukan Palindrom' 
+                    }
+                }  
+                return 'Palindrome';
+            }  
+            
+            const value = palindrome('Kasur ini rusak');  
+            console.log(value)
+            
+            </script>  
+        </body>  
+</html>   

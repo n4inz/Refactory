@@ -1,0 +1,53 @@
+<html>  
+    <head> 
+        <title>Json Manipulation</title>  
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    </head>  
+        <body> 
+            
+
+            <script>
+                    
+                    axios.get('data.json')
+                    .then(function (response) {
+                       var fil =  response.data.filter(d => d.placement.name == "Meeting Room");
+                       fil.map(res => {
+                            console.log(res.placement.name)
+                            
+                        })
+
+                        // Find all electronic devices.
+                        var fil =  response.data.filter(d => d.type == "electronic");
+                        fil.map(res => {
+                                console.log(res.tags[0])
+                                
+                        })
+
+                        // Find all the furniture
+                        var fil =  response.data.filter(d => d.type == "furniture");
+                        fil.map(res => {
+                                console.log(res.tags[1])
+                        })
+                           
+
+                        // Find all items with brown color
+                        var fil =  response.data.filter(d => d.tags[2] == "brown");
+                       
+                        fil.map(res => {
+                                console.log(res.tags[2])
+                        })
+              
+                    })
+                    .catch(function (error) {
+                        // handle error
+                        console.log(error);
+                    })
+
+            </script>
+
+        </body>  
+</html>    
+ 
+ 

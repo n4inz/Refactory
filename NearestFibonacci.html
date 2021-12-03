@@ -1,0 +1,29 @@
+<html>  
+    <head> 
+        <title>Nearest Fibonacci</title>  
+    </head>  
+        <body> 
+            <script>         
+               function fibonacci(nums) {
+ 
+                    var jum = 0
+                    nums.forEach(a => {
+                        jum += a;
+                    });
+  
+                    let fib = [0, 1];
+                    let data = [];
+                    
+                    for(let i = 2; i <= jum; i++) {
+                        fib[i] = fib[i - 1] + fib[i - 2]; 
+                        data.push(fib[i]);
+                    }
+                    
+                    console.log(data)
+                }
+
+                fibonacci([15,3,1])
+            </script>  
+        </body>  
+</html>    
+ 

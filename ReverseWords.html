@@ -1,0 +1,77 @@
+<html>  
+    <head> 
+        <title>Reverse Word </title>  
+    </head>  
+        <body> 
+            <script> 
+                const str = 'I am A Great human';
+                    function reverseWord(str) {
+                        var arr = str.split("");
+                        
+                        var arr2 = str.split(" ");
+                        processUserInput(arr2,(d) =>{
+                            
+                            const rev = d.map(el => {
+                                
+                                return el.split('').join("");
+                            });
+    
+                            let myPromise = new Promise(function(res, rej) {
+                            var push = [];
+                            res(push)
+                            for(i = 0; i<=arr.length; i++){
+
+                                if (arr[i] === arr[i].toUpperCase()
+                                    && arr[i] !== arr[i].toLowerCase()) {
+                                    
+                                    
+                                    push.push(i)
+                                    
+                                }
+                            }
+
+                            
+                        });
+
+                            myPromise.then(
+                                function(value) { 
+                                    const cek = rev.join(" ").split("");
+                                        
+                                        value.forEach(element => {
+                                        
+                                        
+                                            var ganti = cek[element].toUpperCase();
+                                        
+                                            cek.splice(element, 1, ganti)
+
+                                            
+                                        });
+                                
+                                    const kel =   cek.map(f => {
+                                    return  f.split('').join("");
+                                    })
+
+                                    console.log(kel.join(""));
+
+                                    document.write(kel.join(""))
+                                },
+                                
+                            );
+                        });
+
+
+                        function processUserInput(a, callback) {            
+                            data = [];
+                            for(n = 0; n<a.length; n++){
+                                data.push(a[n].split('').reverse().join("").toLowerCase())
+                            }
+                            return callback(data)
+                        }
+
+                };
+                        
+                reverseWord(str)
+                    
+                </script> 
+        </body>  
+</html>    

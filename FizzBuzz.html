@@ -1,0 +1,42 @@
+<html>  
+    <head> 
+        <title>Fizz Buzz</title>  
+    </head>  
+        <body> 
+            <script> 
+
+                function fizzBuzz(num){
+
+                   var no = []
+                    for (var i = 1; i <= num; i++) {
+                        if (i % 3 == 0 && i % 5 == 0) {
+                            no.push("FizzBuzz")
+                        } else if (i % 3 === 0) {
+                            no.push("Fizz")
+                        } else if (i % 5 === 0) {
+                              no.push("Buzz")
+                        } else {
+                             no.push(i).toString()
+                        }
+
+                        
+
+                        
+
+                   
+                    }
+
+                    return no;
+
+                    
+                }
+
+
+            
+                const value = fizzBuzz(15)
+                document.write("["+value+"]")
+                console.log(value)
+               
+            </script> 
+        </body>  
+</html>     

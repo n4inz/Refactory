@@ -1,0 +1,19 @@
+<html>  
+    <head> 
+        <title>Leap Year </title>  
+    </head>  
+        <body> 
+            <script>         
+                function leepYear(num1, num2) {  
+
+                    for(let i = num1; i <= num2; i++){
+                        if((i%4==0) && (i%100!=0)){
+                        document.write(`${i}, `);
+                        } 
+                        
+                    }
+                }  
+            const value = leepYear(1900, 2020);   
+            </script>  
+        </body>  
+</html>    
